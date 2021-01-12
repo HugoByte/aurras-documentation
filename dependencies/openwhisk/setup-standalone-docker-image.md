@@ -1,4 +1,4 @@
-# A. Standalone Docker Image
+# Standalone Docker Image
 
 OpenWhisk standalone server is meant to run a simple OpenWhisk server for local development and test purposes. Standalone controller image published as `openwhisk/standalone:nightly` is used for development.
 
