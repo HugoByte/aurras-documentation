@@ -2,7 +2,7 @@
 
 Current Supported Blockchains are
 
-* [Substrate based chains](substrate-event-feed.md) \(Polkadot, Kusama\)
+* [Substrate based chains](substrate-event-feed/) \(Polkadot, Kusama\)
 
 
 
