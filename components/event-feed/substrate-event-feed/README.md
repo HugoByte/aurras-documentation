@@ -11,25 +11,23 @@ Aurras is a middleware that acts as an event processor and a low code workflow o
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Name</th>
-      <th style="text-align:left">Description</th>
       <th style="text-align:left">Environment Variable</th>
       <th style="text-align:left">Supported Values</th>
+      <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">Chain Name</td>
-      <td style="text-align:left">Name of the chain which will be registered with the event manager. Value
-        should be alphanumeric</td>
       <td style="text-align:left">CHAIN_NAME</td>
       <td style="text-align:left"><code>CHAIN_NAME=polkadot</code>
       </td>
+      <td style="text-align:left">
+        <ul>
+          <li>alphanumeric string</li>
+        </ul>
+      </td>
     </tr>
     <tr>
-      <td style="text-align:left">Chain Endpoint</td>
-      <td style="text-align:left">Endpoint of the chain node to be connected. The protocol of the endpoint
-        should either ws (WebSocket) or wss (WebSocket Secure)</td>
       <td style="text-align:left">CHAIN_ENDPOINT</td>
       <td style="text-align:left">
         <p><code>CHAIN_ENDPOINT=ws://localhost:9944</code>
@@ -37,24 +35,58 @@ Aurras is a middleware that acts as an event processor and a low code workflow o
         <p><code>CHAIN_ENDPOINT=wss://localhost:9944</code>
         </p>
       </td>
+      <td style="text-align:left">
+        <p>Protocols Supported :</p>
+        <ul>
+          <li>ws (WebSocket)</li>
+          <li>wss (WebSocket Secure)</li>
+        </ul>
+      </td>
     </tr>
     <tr>
-      <td style="text-align:left">Loggers</td>
-      <td style="text-align:left">
-        <p>Logging mechanism. At present only console and file loggers are supported.
-          Multiple loggers can be provided seperated by &apos;;&apos; In the format
-          specified:</p>
-        <p>LOGGERS=type,level[,param]</p>
-      </td>
       <td style="text-align:left">LOGGERS</td>
       <td style="text-align:left"><code>LOGGERS=console,info;file,error,/home/event-feed.log</code>
       </td>
+      <td style="text-align:left">
+        <p>Loggers Available:</p>
+        <ul>
+          <li>console</li>
+          <li>file</li>
+        </ul>
+        <p>Logger Levels:</p>
+        <ul>
+          <li>info</li>
+          <li>warning</li>
+          <li>error</li>
+          <li>debug</li>
+        </ul>
+        <p>
+          <br />Format:
+          <br />LOGGERS=type,level[,param]
+          <br />
+          <br />Multiple loggers can be provided seperated by &quot;;&quot;</p>
+        <p></p>
+      </td>
     </tr>
     <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">EXCLUDES</td>
+      <td style="text-align:left"><code>EXCLUDES=&quot;system;balance=transfer;&quot;</code>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Section can be excluded as whole</li>
+          <li>Specific method of the section can be excluded</li>
+        </ul>
+        <p>Format: EXCLUDES=&quot;section[=methods]&quot;</p>
+        <p>Multiple sections to be provided seperated by &quot;;&quot;</p>
+        <p>Multiple methods to be seperated by &quot;,&quot;</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">TYPES_FILE</td>
+      <td style="text-align:left"><code>TYPES_FILE=&quot;/opt/types.json&quot;</code>
+      </td>
+      <td style="text-align:left">Location to custom types for the chain</td>
     </tr>
   </tbody>
 </table>
