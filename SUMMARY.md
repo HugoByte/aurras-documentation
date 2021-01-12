@@ -12,5 +12,7 @@
 
 ## Components
 
-* [Event Feed](components/event-feed.md)
+* [Event Feed](components/event-feed/README.md)
+  * [Blockchain](components/event-feed/blockchain/README.md)
+    * [Substrate Event Feed](components/event-feed/blockchain/substrate-event-feed.md)
 
