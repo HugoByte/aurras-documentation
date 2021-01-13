@@ -88,6 +88,36 @@ Aurras is a middleware that acts as an event processor and a low code workflow o
       </td>
       <td style="text-align:left">Location to custom types for the chain</td>
     </tr>
+    <tr>
+      <td style="text-align:left">KAFKA_BROKERS</td>
+      <td style="text-align:left"><code>KAFKA_BROKERS=localhost:9091;localhost:9092</code>
+      </td>
+      <td style="text-align:left">List of kafka brokers where event should be posted seperated by &quot;;&quot;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">KAFKA_TOPIC</td>
+      <td style="text-align:left"><code>KAFKA_TOPIC=substrate</code>
+      </td>
+      <td style="text-align:left">Kafka topic to which events to be posted &quot;;&quot;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">OPENWHISK_API_KEY</td>
+      <td style="text-align:left"><code>OPENWHISK_API_KEY=cafebabe-cafe-babe-cafe-babecafebabe:007zO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP</code>
+      </td>
+      <td style="text-align:left">Openwhisk authentication key</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">OPENWHISK_API_HOST</td>
+      <td style="text-align:left"><code>OPENWHISK_API_HOST=http://localhost:3232</code>
+      </td>
+      <td style="text-align:left">Openwhisk API Endpoint</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">OPENWHISK_NAMESPACE</td>
+      <td style="text-align:left"><code>OPENWHISK_NAMESPACE=aurras</code>
+      </td>
+      <td style="text-align:left">Organization space where the rules and triggers related to aurras resides</td>
+    </tr>
   </tbody>
 </table>
 
