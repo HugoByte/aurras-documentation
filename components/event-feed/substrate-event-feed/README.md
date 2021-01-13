@@ -8,6 +8,8 @@ Aurras is a middleware that acts as an event processor and a low code workflow o
 
 ### Configurations
 
+Configuration values below are passed through environment variables.
+
 <table>
   <thead>
     <tr>
