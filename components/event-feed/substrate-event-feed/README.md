@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
-Aurras is a middleware that acts as an event processor and a low code workflow orchestration platform. This project is an Event source for Aurras system to source events from chain.
+Aurras is a middleware that acts as an event processor and a low code workflow orchestration platform. This project is an Event source for Aurras system to source events from the chain.
 
 ### Configurations
 
@@ -64,7 +64,7 @@ Aurras is a middleware that acts as an event processor and a low code workflow o
           <br />Format:
           <br />LOGGERS=type,level[,param]
           <br />
-          <br />Multiple loggers can be provided seperated by &quot;;&quot;</p>
+          <br />Multiple loggers can be provided separated by &quot;;&quot;</p>
         <p></p>
       </td>
     </tr>
@@ -74,12 +74,12 @@ Aurras is a middleware that acts as an event processor and a low code workflow o
       </td>
       <td style="text-align:left">
         <ul>
-          <li>Section can be excluded as whole</li>
-          <li>Specific method of the section can be excluded</li>
+          <li>A Section can be excluded as whole</li>
+          <li>Specific methods of the section can be excluded</li>
         </ul>
         <p>Format: EXCLUDES=&quot;section[=methods]&quot;</p>
-        <p>Multiple sections to be provided seperated by &quot;;&quot;</p>
-        <p>Multiple methods to be seperated by &quot;,&quot;</p>
+        <p>Multiple sections to be provided separated by &quot;;&quot;</p>
+        <p>Multiple methods to be separated by &quot;,&quot;</p>
       </td>
     </tr>
     <tr>
@@ -92,7 +92,7 @@ Aurras is a middleware that acts as an event processor and a low code workflow o
       <td style="text-align:left">KAFKA_BROKERS</td>
       <td style="text-align:left"><code>KAFKA_BROKERS=localhost:9091;localhost:9092</code>
       </td>
-      <td style="text-align:left">List of kafka brokers where event should be posted seperated by &quot;;&quot;</td>
+      <td style="text-align:left">List of Kafka brokers where the event should be posted separated by &quot;;&quot;</td>
     </tr>
     <tr>
       <td style="text-align:left">KAFKA_TOPIC</td>
