@@ -6,7 +6,7 @@
 
 * [Docker](dependencies/docker.md)
 * [Openwhisk](dependencies/openwhisk/README.md)
-  * [Standalone Docker Image](dependencies/openwhisk/setup-standalone-docker-image.md)
+  * [Docker Compose](dependencies/openwhisk/setup-standalone-docker-image.md)
   * [Kubernetes](dependencies/openwhisk/setup-kubernetes.md)
 
 ## Components

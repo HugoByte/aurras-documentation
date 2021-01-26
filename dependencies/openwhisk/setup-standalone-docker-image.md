@@ -1,27 +1,203 @@
-# Standalone Docker Image
+# Docker Compose
 
-OpenWhisk standalone server is meant to run a simple OpenWhisk server for local development and test purposes. Standalone controller image published as `openwhisk/standalone:nightly` is used for development.
+OpenWhisk docker-compose deployment is used for local development and testing and should not be used for production.
 
 The below configuration is provided in the docker-compose configuration
 
 {% tabs %}
-{% tab title="Openwhisk Standalone Docker Compose Configuration" %}
+{% tab title="Openwhisk Docker Compose Configuration" %}
 {% code title="docker-compose.yaml" %}
 ```yaml
-openwhisk-standalone:
-    image: openwhisk/standalone:nightly
-    container_name: openwhisk
-    hostname: openwhisk
-    environment:
-      - JVM_EXTRA_ARGS=-Dwhisk.users.aurras-system=cafebabe-cafe-babe-cafe-babecafebabe:007zO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP -Dwhisk.container-factory.container-args.network=aurras
-    networks:
-      - aurras
+version: '3.5'
+services:
+  db:
+    image: apache/couchdb:2.3
     ports:
-      - "3233:3233"
-      - "3232:3232"
+      - "5984:5984"
+    environment:
+      COUCHDB_USER: ${COUCHDB_USER}
+      COUCHDB_PASSWORD: ${COUCHDB_PASSWORD}
+    volumes:
+      - ./data/couchdb:/opt/couchdb/data:rw
+      
+  couchdb-setup:
+    image: ddragosd/ansible:2.4.0.0-debian8
+    working_dir: /openwhisk/ansible
+    command: /bin/sh -c "ansible-playbook setup.yml >> /logs/couchdb-setup.log 2>&1 && ansible-playbook couchdb.yml --tags=ini >> /logs/couchdb-setup.log 2>&1 && ansible-playbook initdb.yml wipe.yml -e db_host=db.docker -e openwhisk_home=/openwhisk -e db_prefix=local_ >> /logs/couchdb-setup.log 2>&1"
+    links:
+      - db:db.docker
+    depends_on:
+      - db
+    restart: "no"  
+    volumes:
+      - ./logs:/logs
+      - ./config/ansible:/openwhisk/ansible
+
+  zookeeper:
+    image: zookeeper:3.4
+    ports:
+      - "2181:2181"
+      - "2888:2888"
+      - "3888:3888"
+    environment:
+      ZOO_SERVERS: server.1=0.0.0.0:2888:3888
+      ZOO_MY_ID: 1
+
+  kafka:
+    image: wurstmeister/kafka:0.11.0.1
+    links:
+      - zookeeper
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_HOST_NAME: kafka
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --enable-bootstrap
+      - ./data/kafka:/kafka:rw
+
+  kafka-rest:
+    image: confluentinc/cp-kafka-rest:3.3.1
+    hostname: kafka-rest
+    environment:
+      - ACCESS_CONTROL_ALLOW_ORIGIN_DEFAULT="*"
+      - KAFKA_REST_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_REST_HOST_NAME=kafka-rest
+      - KAFKA_REST_LISTENERS=http://kafka-rest:8082
+      - KAFKA_REST_CONSUMER_REQUEST_TIMEOUT_MS=30000
+      - KAFKA_REST_BOOTSTRAP_SERVERS=PLAINTEXT://kafka:9092
+    links:
+      - zookeeper
+      - kafka
+    depends_on:
+      - zookeeper
+      - kafka
+
+  kafka-topics-ui:
+      image: landoop/kafka-topics-ui:0.9.3
+      environment:
+        - KAFKA_REST_PROXY_URL=http://kafka-rest:8082
+        - KAFKA_REST_BOOTSTRAP_SERVERS=PLAINTEXT://kafka:9092
+        - PROXY=true
+      ports:
+        - 8001:8000
+      links:
+        - kafka
+        - kafka-rest
+
+  redis:
+    image: redis:2.8
+    ports:
+      - "6379:6379"
+
+  controller:
+    image: openwhisk/controller:nightly
+    command: /bin/sh -c "while ping -c1 db.setup &>/dev/null; do sleep 1; done; echo 'CouchDB Setup Complete!' && exec /init.sh 0 >> /logs/controller.log 2>&1"
+    links:
+      - db:db.docker
+      - couchdb-setup:db.setup
+      - kafka:kafka.docker
+      - zookeeper:zookeeper.docker
+    depends_on:
+      - db
+      - kafka
+      - couchdb-setup
+    env_file:
+      - ./docker-whisk-controller.env
+      - ./local.env
+    environment:
+      COMPONENT_NAME: controller
+      PORT: 8888
+      KAFKA_HOSTS: kafka.docker:9092
+      ZOOKEEPER_HOSTS: zookeeper.docker:2181
+      CONFIG_whisk_couchdb_provider: CouchDB
+      CONFIG_whisk_couchdb_protocol: http
+      CONFIG_whisk_couchdb_port: 5984
+      CONFIG_whisk_couchdb_host: db.docker
+      CONFIG_whisk_couchdb_username: ${COUCHDB_USER}
+      CONFIG_whisk_couchdb_password: ${COUCHDB_PASSWORD}
+      CONFIG_akka_remote_netty_tcp_hostname: controller
+      CONFIG_akka_remote_netty_tcp_port: 2551
+      CONFIG_akka_remote_netty_tcp_bindPort: 2551
+      CONFIG_akka_actor_provider: cluster
+      LOADBALANCER_HOST: ${DOCKER_COMPOSE_HOST}
+      LOADBALANCER_HOST_PORT: 31001
+    volumes:
+      - ./logs:/logs
+    ports:
+      - "8888:8888"
+      - "2551:2551"
+      - "9222:9222"
+
+  invoker:
+    image: openwhisk/invoker:nightly
+    command: /bin/sh -c "while ping -c1 db.setup &>/dev/null; do sleep 1; done; sleep 1m && exec /init.sh --id 0 >> /logs/invoker.log 2>&1"
+    privileged: true
+    pid: "host"
+    userns_mode: "host"
+    links:
+      - db:db.docker
+      - couchdb-setup:db.setup
+      - kafka:kafka.docker
+      - zookeeper:zookeeper.docker
+      - controller:controller.docker
+    depends_on:
+      - db
+      - kafka
+      - controller
+      - couchdb-setup
+    env_file:
+      - ./docker-whisk-controller.env
+      - ./local.env
+    environment:
+      COMPONENT_NAME: invoker
+      SERVICE_NAME: invoker0
+      PORT: 8085
+      KAFKA_HOSTS: kafka.docker:9092
+      ZOOKEEPER_HOSTS: zookeeper.docker:2181
+      CONFIG_whisk_couchdb_provider: CouchDB
+      CONFIG_whisk_couchdb_protocol: http
+      CONFIG_whisk_couchdb_port: 5984
+      CONFIG_whisk_couchdb_host: db.docker
+      CONFIG_whisk_couchdb_username: ${COUCHDB_USER}
+      CONFIG_whisk_couchdb_password: ${COUCHDB_PASSWORD}
+      EDGE_HOST: ${DOCKER_COMPOSE_HOST}
+      EDGE_HOST_APIPORT: 31001
+      CONFIG_whisk_containerFactory_containerArgs_network: openwhisk_default
+      WHISK_API_HOST_NAME: ${DOCKER_COMPOSE_HOST}
+      WHISK_API_HOST_PORT: 31001
+    volumes:
+      - ./logs:/logs
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/docker/containers:/containers
+      - /sys/fs/cgroup:/sys/fs/cgroup
+    ports:
+      - "8085:8085"
+      - "9333:9222"
+
+  apigateway:
+    image: openwhisk/apigateway:nightly
+    links:
+      - controller:controller.docker
+      - redis:redis.docker
+    environment:
+      - REDIS_HOST=${DOCKER_COMPOSE_HOST}
+      - REDIS_PORT=6379
+      - PUBLIC_MANAGEDURL_PORT=9090
+      - PUBLIC_MANAGEDURL_HOST=${DOCKER_COMPOSE_HOST}
+    depends_on:
+      - controller
+      - redis
+    volumes:
+      - ./config/api-gateway/ssl:/etc/ssl:ro
+      - ./config/api-gateway/generated-conf.d:/etc/api-gateway/generated-conf.d
+    ports:
+      - "80:80"
+      - "31001:31001"
+      - "9000:9000"
+      - "9090:8080"
 ```
 {% endcode %}
 {% endtab %}
