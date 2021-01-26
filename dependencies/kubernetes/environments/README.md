@@ -1,6 +1,6 @@
 # Environments
 
 * [Windows](windows.md)
-* macOS
-* Linux
+* [macOS](macos.md)
+* [Linux](linux.md)
 
