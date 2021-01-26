@@ -2,12 +2,12 @@
 
 OpenWhisk docker-compose deployment is used for local development and testing and should not be used for production.
 
-#### Prerequisites
+### Prerequisites
 
 1. [Docker](../docker.md)
 2. Docker Compose
 
-#### Deployment Guide
+### Deployment Guide
 
 1. Clone [aurras-deployment-docker-compose](https://github.com/HugoByte/aurras-deployment-docker-compose)
 
