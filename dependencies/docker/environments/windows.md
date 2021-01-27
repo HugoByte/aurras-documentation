@@ -14,6 +14,9 @@
 6. Start Docker Desktop from the Windows Start menu.
 7. From the Docker menu, select Settings &gt; General.
 8. Enable Use WSL 2 Based Engine Option.
+9. Go to Settings &gt; Resources &gt; WSL Integration and Select from your installed WSL 2 distributions
+10. Click Apply & Restart
+11. To confirm that Docker has been installed, open a Ubuntu Terminal and check the docker version using
 
 Reference: 
 
