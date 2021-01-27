@@ -2,5 +2,5 @@
 
 * [Windows](windows.md)
 * [macOS](macos.md)
-* [Ubuntu](kubernetes-ubuntu.md)
+* [Ubuntu](docker-ubuntu.md)
 

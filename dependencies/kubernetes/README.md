@@ -12,11 +12,11 @@ Consider using this only for development and testing
 
 #### Prerequisites
 
-1. [Docker](../docker.md)
+1. [Docker](../docker/)
 
 #### Environment
 
 * [Windows](environments/windows.md)
 * [macOS](environments/macos.md)
-* [Linux](environments/linux.md)
+* [Ubuntu](environments/kubernetes-ubuntu.md)
 

@@ -1,4 +1,4 @@
-# macOS
+# Ubuntu
 
 ### Setup Guide
 

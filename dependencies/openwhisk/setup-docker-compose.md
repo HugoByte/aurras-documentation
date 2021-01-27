@@ -4,7 +4,7 @@ OpenWhisk docker-compose deployment is used for local development and testing an
 
 ### Prerequisites
 
-1. [Docker](../docker.md)
+1. [Docker](../docker/)
 2. Docker Compose
 
 ### Deployment Guide

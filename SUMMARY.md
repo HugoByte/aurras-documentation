@@ -4,12 +4,16 @@
 
 ## Dependencies
 
-* [Docker](dependencies/docker.md)
+* [Docker](dependencies/docker/README.md)
+  * [Environments](dependencies/docker/environments/README.md)
+    * [Windows](dependencies/docker/environments/windows.md)
+    * [macOS](dependencies/docker/environments/macos.md)
+    * [Ubuntu](dependencies/docker/environments/docker-ubuntu.md)
 * [Kubernetes](dependencies/kubernetes/README.md)
   * [Environments](dependencies/kubernetes/environments/README.md)
     * [Windows](dependencies/kubernetes/environments/windows.md)
     * [macOS](dependencies/kubernetes/environments/macos.md)
-    * [Linux](dependencies/kubernetes/environments/linux.md)
+    * [Ubuntu](dependencies/kubernetes/environments/kubernetes-ubuntu.md)
 * [Helm](dependencies/helm.md)
 * [Openwhisk](dependencies/openwhisk/README.md)
   * [Deployment - Docker Compose](dependencies/openwhisk/setup-docker-compose.md)
