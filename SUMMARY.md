@@ -9,6 +9,7 @@
     * [Windows](dependencies/docker/environments/windows.md)
     * [macOS](dependencies/docker/environments/macos.md)
     * [Ubuntu](dependencies/docker/environments/docker-ubuntu.md)
+* [Docker Compose](dependencies/docker-compose.md)
 * [Kubernetes](dependencies/kubernetes/README.md)
   * [Environments](dependencies/kubernetes/environments/README.md)
     * [Windows](dependencies/kubernetes/environments/windows.md)
