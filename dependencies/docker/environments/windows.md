@@ -18,6 +18,10 @@
 10. Click Apply & Restart
 11. To confirm that Docker has been installed, open a Ubuntu Terminal and check the docker version using
 
+```text
+docker --version
+```
+
 Reference: 
 
 * [https://docs.microsoft.com/en-us/windows/wsl/install-win10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
