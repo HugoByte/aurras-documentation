@@ -1,5 +1,9 @@
 # macOS
 
+{% hint style="info" %}
+Docker Desktop for macOS comes with pre-installed docker-compose. If docker-compose --version gives version 1.2X and above, you may skip this setup.
+{% endhint %}
+
 ### Installation Guide
 
 1. Open Terminal.
