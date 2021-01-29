@@ -2,6 +2,12 @@
 
 * [Initial page](README.md)
 
+## Components
+
+* [Event Feed](components/event-feed/README.md)
+  * [Substrate Event Feed](components/event-feed/substrate-event-feed/README.md)
+    * [Configuration](components/event-feed/substrate-event-feed/configuration.md)
+
 ## Dependencies
 
 * [Docker](dependencies/docker/README.md)
@@ -23,10 +29,4 @@
 * [Openwhisk](dependencies/openwhisk/README.md)
   * [Deployment - Docker Compose](dependencies/openwhisk/setup-docker-compose.md)
   * [Deployment - Kubernetes](dependencies/openwhisk/setup-kubernetes.md)
-
-## Components
-
-* [Event Feed](components/event-feed/README.md)
-  * [Substrate Event Feed](components/event-feed/substrate-event-feed/README.md)
-    * [Configuration](components/event-feed/substrate-event-feed/configuration.md)
 
