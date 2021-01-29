@@ -47,7 +47,21 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
-6. To confirm that Docker has been installed, check the docker version using
+6. Create the docker group.
+
+```text
+sudo groupadd docker
+```
+
+7. Add user to the docker group.
+
+```text
+sudo usermod -aG docker $USER
+```
+
+8. Log out and log back in so that your group membership is re-evaluated.
+
+9. To confirm that Docker has been installed, check the docker version using
 
 ```text
 docker --version
