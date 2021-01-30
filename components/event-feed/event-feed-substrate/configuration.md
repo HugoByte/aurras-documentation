@@ -104,7 +104,7 @@ List of Kafka brokers where the event should be posted. separated by ";"
 | :--- | :--- |
 | KAFKA\_BROKERS | `KAFKA_BROKERS=localhost:9091;localhost:9092` |
 
-#### 
+
 
 #### KAFKA\_TOPIC
 
@@ -114,7 +114,7 @@ Kafka topic to which events to be posted ";"
 | :--- | :--- |
 | KAFKA\_TOPIC | `KAFKA_TOPIC=substrate` |
 
-#### 
+
 
 #### OPENWHISK\_API\_KEY
 
@@ -124,7 +124,7 @@ Openwhisk authentication key.
 | :--- | :--- |
 | OPENWHISK\_API\_KEY | `OPENWHISK_API_KEY=cafebabe-cafe-babe-cafe-babecafebabe:007zO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP` |
 
-#### 
+
 
 #### OPENWHISK\_API\_HOST
 
@@ -134,7 +134,7 @@ Openwhisk API Endpoint
 | :--- | :--- |
 | OPENWHISK\_API\_HOST | `OPENWHISK_API_HOST=http://localhost:3232` |
 
-#### 
+
 
 #### OPENWHISK\_NAMESPACE
 
