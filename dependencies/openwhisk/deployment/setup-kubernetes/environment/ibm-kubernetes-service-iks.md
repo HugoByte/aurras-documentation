@@ -1,2 +1,0 @@
-# IBM Kubernetes Service \(IKS\)
-

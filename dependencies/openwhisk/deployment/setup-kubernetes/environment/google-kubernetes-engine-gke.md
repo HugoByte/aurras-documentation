@@ -1,2 +1,0 @@
-# Google Kubernetes Engine \(GKE\)
-

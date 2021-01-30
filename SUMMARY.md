@@ -34,8 +34,4 @@
         * [Windows](dependencies/openwhisk/deployment/setup-kubernetes/environment/windows.md)
         * [macOS](dependencies/openwhisk/deployment/setup-kubernetes/environment/macos.md)
         * [Ubuntu](dependencies/openwhisk/deployment/setup-kubernetes/environment/ubuntu.md)
-        * [IBM Cloud Private \(ICP\)](dependencies/openwhisk/deployment/setup-kubernetes/environment/ibm-cloud-private-icp.md)
-        * [IBM Kubernetes Service \(IKS\)](dependencies/openwhisk/deployment/setup-kubernetes/environment/ibm-kubernetes-service-iks.md)
-        * [Google Kubernetes Engine \(GKE\)](dependencies/openwhisk/deployment/setup-kubernetes/environment/google-kubernetes-engine-gke.md)
-        * [Amazon Elastic Kubernetes Service \(EKS\)](dependencies/openwhisk/deployment/setup-kubernetes/environment/amazon-elastic-kubernetes-service-eks.md)
 
