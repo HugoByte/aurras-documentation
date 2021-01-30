@@ -7,5 +7,5 @@ Apache OpenWhisk is an open-source, distributed Serverless platform that execute
 Openwhisk can be deployed in multiple ways. For production, it is recommended to use Kubernetes
 
 * [Docker Compose](deployment/setup-docker-compose.md)
-* [Kubernetes](deployment/setup-kubernetes.md)
+* [Kubernetes](deployment/setup-kubernetes/)
 

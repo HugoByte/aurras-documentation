@@ -26,7 +26,6 @@ This will be an ideal, easier and a managed solution to deploy aurras to product
 
 #### Common Cloud Providers
 
-* [Azure Kubernetes Service \(AKS\)](https://azure.microsoft.com/en-in/services/kubernetes-service/)
 * [IBM Cloud Private \(ICP\)](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.1/getting_started/introduction.html)
 * [IBM Kubernetes Service \(IKS\)](www.ibm.com/kubernetes/service)
 * [Google Kubernetes Engine \(GKE\)](https://cloud.google.com/containers/gke)

@@ -29,5 +29,11 @@
 * [Openwhisk](dependencies/openwhisk/README.md)
   * [Deployment](dependencies/openwhisk/deployment/README.md)
     * [Docker Compose](dependencies/openwhisk/deployment/setup-docker-compose.md)
-    * [Kubernetes](dependencies/openwhisk/deployment/setup-kubernetes.md)
+    * [Kubernetes](dependencies/openwhisk/deployment/setup-kubernetes/README.md)
+      * [Environment](dependencies/openwhisk/deployment/setup-kubernetes/environment/README.md)
+        * [Windows](dependencies/openwhisk/deployment/setup-kubernetes/environment/windows.md)
+        * [macOS](dependencies/openwhisk/deployment/setup-kubernetes/environment/macos.md)
+        * [Ubuntu](dependencies/openwhisk/deployment/setup-kubernetes/environment/ubuntu.md)
+        * [IBM Cloud Private \(ICP\)](dependencies/openwhisk/deployment/setup-kubernetes/environment/ibm-cloud-private-icp.md)
+        * [IBM Kubernetes Service \(IKS\)](dependencies/openwhisk/deployment/setup-kubernetes/environment/ibm-kubernetes-service-iks.md)
 

@@ -4,7 +4,7 @@ Only OpenWhisk Kubernetes deployment should be used for production deployment
 
 ### Prerequisites
 
-* [Kubernetes](../../kubernetes/)
+* [Kubernetes](../../../kubernetes/)
 
 ### Deployment Guide
 
