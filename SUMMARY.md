@@ -27,6 +27,7 @@
     * [Ubuntu](dependencies/kubernetes/environments/kubernetes-ubuntu.md)
 * [Helm](dependencies/helm.md)
 * [Openwhisk](dependencies/openwhisk/README.md)
-  * [Deployment - Docker Compose](dependencies/openwhisk/setup-docker-compose.md)
-  * [Deployment - Kubernetes](dependencies/openwhisk/setup-kubernetes.md)
+  * [Deployment](dependencies/openwhisk/deployment/README.md)
+    * [Docker Compose](dependencies/openwhisk/deployment/setup-docker-compose.md)
+    * [Kubernetes](dependencies/openwhisk/deployment/setup-kubernetes.md)
 
