@@ -6,3 +6,17 @@ Only OpenWhisk Kubernetes deployment should be used for production deployment
 
 * [Kubernetes](../../kubernetes/)
 
+### Deployment Guide
+
+1. Clone [aurras-deployment-kubernetes](https://github.com/HugoByte/aurras-deployment-kubernetes)
+
+```text
+git clone https://github.com/HugoByte/aurras-deployment-kubernetes
+```
+
+     2. Navigate to openwhisk setup directory
+
+```text
+cd aurras-deployment-kubernetes/openwhisk
+```
+
