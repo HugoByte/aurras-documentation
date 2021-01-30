@@ -5,8 +5,8 @@
 ## Components
 
 * [Event Feed](components/event-feed/README.md)
-  * [Substrate Event Feed](components/event-feed/substrate-event-feed/README.md)
-    * [Configuration](components/event-feed/substrate-event-feed/configuration.md)
+  * [Event Feed - Substrate](components/event-feed/event-feed-substrate/README.md)
+    * [Configuration](components/event-feed/event-feed-substrate/configuration.md)
 
 ## Dependencies
 
