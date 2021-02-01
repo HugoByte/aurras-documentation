@@ -23,7 +23,7 @@ kubectl describe nodes | grep InternalIP
    4. Creating mycluster.yaml with **apiHostName** as InternalIP of the nodes 
 
 {% hint style="info" %}
-Assuming the IP returned from the above step 4 as "192.168.65.3"
+Assuming the IP returned from the above step 3 as "192.168.65.3"
 {% endhint %}
 
 ```text
