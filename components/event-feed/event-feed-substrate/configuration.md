@@ -8,7 +8,7 @@ Configuration values below are passed through environment variables.
 
 An alphanumeric string to identify the chain.
 
-| Environment Variable | Supported Values |
+| Environment Variable | Sample Values |
 | :--- | :--- |
 | CHAIN\_NAME | `CHAIN_NAME=polkadot` |
 
@@ -22,7 +22,7 @@ The Endpoint of the chain node to which the event feed should connect to. Protoc
   <thead>
     <tr>
       <th style="text-align:left">Environment Variable</th>
-      <th style="text-align:left">Supported Values</th>
+      <th style="text-align:left">Sample Values</th>
     </tr>
   </thead>
   <tbody>
@@ -61,7 +61,7 @@ LOGGERS=type,level\[,param\]
 
 Multiple loggers can be provided separated by ";"
 
-| Environment Variable | Supported Values |
+| Environment Variable | Sample Values |
 | :--- | :--- |
 | LOGGERS | `LOGGERS=console,info;file,error,/logs/event-feed.log` |
 
@@ -80,7 +80,7 @@ Multiple sections to be provided separated by ";"
 
 Multiple methods to be separated by ","
 
-| Environment Variable | Supported Values |
+| Environment Variable | Sample Values |
 | :--- | :--- |
 | EXCLUDES | `EXCLUDES="system;balance=transfer;"` |
 
@@ -90,7 +90,7 @@ Multiple methods to be separated by ","
 
 Location to custom types for the chain.
 
-| Environment Variable | Supported Values |
+| Environment Variable | Sample Values |
 | :--- | :--- |
 | TYPES\_FILE | `TYPES_FILE="/opt/types.json"` |
 
@@ -100,7 +100,7 @@ Location to custom types for the chain.
 
 List of Kafka brokers where the event should be posted. separated by ";"
 
-| Environment Variable | Supported Values |
+| Environment Variable | Sample Values |
 | :--- | :--- |
 | KAFKA\_BROKERS | `KAFKA_BROKERS=localhost:9091;localhost:9092` |
 
@@ -110,7 +110,7 @@ List of Kafka brokers where the event should be posted. separated by ";"
 
 Kafka topic to which events to be posted ";"
 
-| Environment Variable | Supported Values |
+| Environment Variable | Sample Values |
 | :--- | :--- |
 | KAFKA\_TOPIC | `KAFKA_TOPIC=substrate` |
 
@@ -120,7 +120,7 @@ Kafka topic to which events to be posted ";"
 
 Openwhisk authentication key.
 
-| Environment Variable | Supported Values |
+| Environment Variable | Sample Values |
 | :--- | :--- |
 | OPENWHISK\_API\_KEY | `OPENWHISK_API_KEY=cafebabe-cafe-babe-cafe-babecafebabe:007zO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP` |
 
@@ -130,7 +130,7 @@ Openwhisk authentication key.
 
 Openwhisk API Endpoint
 
-| Environment Variable | Supported Values |
+| Environment Variable | Sample Values |
 | :--- | :--- |
 | OPENWHISK\_API\_HOST | `OPENWHISK_API_HOST=http://localhost:3232` |
 
@@ -140,7 +140,7 @@ Openwhisk API Endpoint
 
 Organization space where the actions, rules, and triggers related to aurras resides.
 
-| Environment Variable | Supported Values |
+| Environment Variable | Sample Values |
 | :--- | :--- |
 | OPENWHISK\_NAMESPACE | `OPENWHISK_NAMESPACE=aurras` |
 
