@@ -47,18 +47,18 @@ nginx:
    6. Create a namespace
 
 ```text
-kubectl create namespace openwhisk
+kubectl create namespace aurras
 ```
 
     7. Deploy Openwhisk using helm
 
 ```text
-helm install owdev ./helm/openwhisk -n openwhisk -f mycluster.yaml
+helm install openwhisk ./helm/openwhisk -n aurras -f mycluster.yaml
 ```
 
   8. Get the summary of installation using
 
 ```text
-helm status owdev -n openwhisk
+helm status openwhisk -n aurras
 ```
 
