@@ -7,6 +7,9 @@
 * [Event Feed](components/event-feed/README.md)
   * [Event Feed - Substrate](components/event-feed/event-feed-substrate/README.md)
     * [Configuration](components/event-feed/event-feed-substrate/configuration.md)
+    * [Deployment](components/event-feed/event-feed-substrate/deployment/README.md)
+      * [Docker Compose](components/event-feed/event-feed-substrate/deployment/docker-compose.md)
+      * [Kubernetes](components/event-feed/event-feed-substrate/deployment/kubernetes.md)
 
 ## Dependencies
 
