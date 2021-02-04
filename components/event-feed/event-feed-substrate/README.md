@@ -1,6 +1,6 @@
 # Event Feed - Substrate
 
-## Aurras Event Feed package to Source Events from Substrate based Chains
+## Event Feed package to Source Events from Substrate based Chains
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
