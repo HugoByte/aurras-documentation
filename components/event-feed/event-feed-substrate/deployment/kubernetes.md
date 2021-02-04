@@ -4,6 +4,7 @@
 
 * [Kubernetes](../../../../dependencies/kubernetes/)
 * [Helm](../../../../dependencies/helm.md)
+* [Openwhisk](../../../../dependencies/openwhisk/) \([Kubernetes](../../../../dependencies/openwhisk/deployment/setup-kubernetes/)\)
 
 ### Deployment Guide
 
