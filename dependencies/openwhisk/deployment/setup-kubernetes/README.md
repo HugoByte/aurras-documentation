@@ -3,7 +3,7 @@
 Only OpenWhisk Kubernetes deployment should be used for production deployment
 
 {% hint style="warning" %}
-For production deployment generate a new user with **wskadmin\_openwhisk-wskadmin** container cli \([reference](https://github.com/apache/openwhisk/tree/master/tools/admin)\) and override default provided system auth
+For production deployment generate a new user and namespace with **wskadmin\_openwhisk-wskadmin** container cli \([reference](https://github.com/apache/openwhisk/tree/master/tools/admin)\) and override default provided system auth
 {% endhint %}
 
 ### Prerequisites
