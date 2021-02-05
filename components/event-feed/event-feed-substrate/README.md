@@ -6,6 +6,11 @@
 
 This Event Feed package facilitates to source events from substrate-based chains. The events will be posted to the OpenWhisk system. [polkadot-js/api](https://github.com/polkadot-js/api) is used under the hood to establish the connection to blockchain nodes and receive events.
 
+#### Prerequisites
+
+1. [Substrate Based Chain](https://substrate.dev/docs/en/tutorials/create-your-first-substrate-chain/)
+2. [Openwhisk](../../../dependencies/openwhisk/)
+
 ### Installation
 
 Assuming basic dependency such as [git](https://git-scm.com/) and [yarn](https://yarnpkg.com/) already installed.
