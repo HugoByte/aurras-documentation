@@ -10,7 +10,8 @@
     * [Deployment](components/event-feed/event-feed-substrate/deployment/README.md)
       * [Docker Compose](components/event-feed/event-feed-substrate/deployment/docker-compose.md)
       * [Kubernetes](components/event-feed/event-feed-substrate/deployment/kubernetes.md)
-* [Event Manager](components/event-manager.md)
+* [Event Manager](components/event-manager/README.md)
+  * [Configuration](components/event-manager/configuration.md)
 
 ## Dependencies
 

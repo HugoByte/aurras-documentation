@@ -132,7 +132,7 @@ Openwhisk API Endpoint
 
 | Environment Variable | Sample Values |
 | :--- | :--- |
-| OPENWHISK\_API\_HOST | `OPENWHISK_API_HOST=http://localhost:3232` |
+| OPENWHISK\_API\_HOST | `OPENWHISK_API_HOST=https://localhost:31001` |
 
 
 
