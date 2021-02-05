@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
-Aurras is a middleware that acts as an event processor and a low code workflow orchestration platform. This project is an Event source for Aurras system to source events from the chain.
+This Event Feed package facilitates to source events from substrate based chains. The events will be posted to the OpenWhisk system.  [polkadot-js/api](https://github.com/polkadot-js/api) is used under the hood to establish connection to blockchain nodes.
 
 ### Installation
 
