@@ -40,11 +40,11 @@ Organization space where the actions to be deployed
 
 | Parameter | Default Value |
 | :--- | :--- |
-| --openwhiskNamespace | aurras |
+| --openwhiskNamespace | guest |
 
 #### usage
 
 ```text
-./deploy.sh --openwhiskNamespace aurras
+./deploy.sh --openwhiskNamespace guest
 ```
 
