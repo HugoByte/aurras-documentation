@@ -2,12 +2,12 @@
 
 Only OpenWhisk Kubernetes deployment should be used for production deployment
 
-#### Prerequisites
+### Prerequisites
 
 * [Kubernetes](../../../kubernetes/)
 * [Helm](../../../helm.md)
 
-#### Environment
+### Environment
 
 * [Windows](environment/windows.md)
 * [macOS](environment/macos.md)

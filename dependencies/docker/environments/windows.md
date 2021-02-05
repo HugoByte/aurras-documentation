@@ -1,6 +1,6 @@
 # Windows
 
-#### Prerequisites
+### Prerequisites
 
 1. Install Windows Subsystem for Linux with WSL 2 Enabled.
 

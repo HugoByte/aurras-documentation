@@ -1,6 +1,6 @@
 # Kubernetes
 
-#### Prerequisites
+### Prerequisites
 
 * [Kubernetes](../../../../dependencies/kubernetes/)
 * [Helm](../../../../dependencies/helm.md)
