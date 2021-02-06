@@ -42,6 +42,19 @@ cd aurras-event-manager
 ./deploy.sh
 ```
 
+### Testing
+
+Run Unit test suites
+
+#### Actions
+
+* Event Receiver
+
+```text
+cd actions/event-receiver
+yarn test
+```
+
 ### License
 
 Licensed under [Apache-2.0](https://github.com/HugoByte/aurras-documentation/tree/f07f6727f0cb01cccf04f15ec446e2d310ca1cb9/components/event-feed/substrate-event-feed/LICENSE/README.md)
