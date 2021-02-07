@@ -22,7 +22,9 @@ cd aurras-deployment-docker-compose/aurras-event-feed-substrate
 
    3. Make [configuration](../configuration.md) changes if need to local.env
 
-   4. Run docker-compose command to start the service
+   4. Add custom type if any for the chain to `config/types.json`
+
+   5. Run docker-compose command to start the service
 
 ```text
 docker-compose --project-name aurras up -d

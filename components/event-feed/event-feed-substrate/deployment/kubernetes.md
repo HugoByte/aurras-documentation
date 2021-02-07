@@ -47,7 +47,7 @@ env:
   - EVENT_RECEIVER: event-receiver
 ```
 
-5. Add custom type for the chain to \`helm/config/types.json\`
+5. Add custom type if any for the chain to `helm/config/types.json`
 
 6. Deploy Openwhisk using helm
 
