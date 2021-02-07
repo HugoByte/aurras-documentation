@@ -38,7 +38,7 @@ env:
   - CHAIN_ENDPOINT: ws://192.168.65.3:9944
   - LOGGERS: console,info;file,error,/logs/event-feed.log
   - EXCLUDES: system
-  - TYPES_FILE: /config/types.json
+  - TYPES_FILE: /configs/types.json #name of the types file should be types.json
   - KAFKA_BROKERS: kafka.docker:9092
   - KAFKA_TOPIC: node-template-topic
   - OPENWHISK_API_KEY: 23bc46b1-71f6-4ed5-8c54-816aa4f8c502:123zO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP
@@ -47,13 +47,15 @@ env:
   - EVENT_RECEIVER: event-receiver
 ```
 
-   5. Deploy Openwhisk using helm
+5. Add custom type for the chain to \`helm/config/types.json\`
+
+6. Deploy Openwhisk using helm
 
 ```text
 helm install aurras-event-feed-substrate ./helm -n aurras -f mycluster.yaml
 ```
 
-  8. Get the summary of installation using
+  7. Get the summary of installation using
 
 ```text
 helm status aurras-event-feed-substrate -n aurras
