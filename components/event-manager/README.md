@@ -53,7 +53,7 @@ cd aurras
 Generate Event Registration ID
 
 ```text
-./register_event_source.sh --name polkadot-balance
+./register_event_source.sh --name "Node Template Balance"
 ```
 
 ### Testing
