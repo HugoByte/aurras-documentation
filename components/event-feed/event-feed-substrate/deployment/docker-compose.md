@@ -22,9 +22,13 @@ cd aurras-deployment-docker-compose/aurras-event-feed-substrate
 
    3. Make [configuration](../configuration.md) changes if need to local.env
 
-   4. Add custom type if any for the chain to `config/types.json`
+   4. Generate the Event ID using `register_event_source.sh` 
 
-   5. Run docker-compose command to start the service
+   5. Update the TOPICS env configuration with the generated Event ID
+
+   6. Add custom type if any for the chain to `config/types.json`
+
+   7. Run docker-compose command to start the service
 
 ```text
 docker-compose --project-name aurras up -d

@@ -106,13 +106,15 @@ List of Kafka brokers where the event should be posted. separated by ";"
 
 
 
-#### KAFKA\_TOPIC \[Mandatory\]
+#### **TOPICS** \[Mandatory\]
 
-Kafka topic to which events to be posted ";"
+Topic to which events from certain sections to be posted ";"
+
+Multiple sections with topic can be provided separated by ";"
 
 | Environment Variable | Sample Values |
 | :--- | :--- |
-| KAFKA\_TOPIC | `KAFKA_TOPIC=substrate` |
+| TOPICS | `TOPICS=balances=c76b7a5d-d18a-43e6-a28f-db6bb7520986` |
 
 
 
@@ -153,6 +155,16 @@ Trigger Endpoint where the event should be posted
 | Environment Variable | Sample Values |
 | :--- | :--- |
 | EVENT\_RECEIVER | `EVENT_RECEIVER=event-receiver` |
+
+\*\*\*\*
+
+**EVENT\_PROCESSOR \[Mandatory\]**
+
+Action which is responsible for parsing the events to generic specification.
+
+| Environment Variable | Sample Values |
+| :--- | :--- |
+| EVENT\_PROCESSOR | `EVENT_PROCESSOR=substrate-event-processor` |
 
 \*\*\*\*
 
