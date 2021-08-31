@@ -10,8 +10,8 @@ Aurras is a middleware that acts as an event processor and a low code workflow o
 
 ### Components
 
+* [Core](components/event-manager/)
 * [Event Feed](components/event-feed/)
-* [Event Manager](components/event-manager/)
 * Workflow Composer
 * Web API Gateway and Backend Service
 
