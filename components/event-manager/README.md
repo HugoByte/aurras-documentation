@@ -1,4 +1,4 @@
-# Event Manager
+# Core
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
@@ -17,9 +17,14 @@ The Event Manager as a core component of the aurras system is composed of multip
 
 #### Actions
 
+* Event Register
 * Event Receiver
-
-This action receives events from the event feed and propagates to the system.
+* Event Processor
+* Event Producer
+* Kafka Provider
+* Balance Filter
+* Balance Notification Register
+* Push Notification
 
 ### Installation
 
@@ -28,13 +33,13 @@ Assuming basic dependency such as [git](https://git-scm.com/) and [yarn](https:/
 1. Clone the repository
 
 ```text
-git clone https://github.com/HugoByte/aurras-event-manager.git
+git clone https://github.com/HugoByte/aurras.git
 ```
 
   2. Navigate to the cloned directory
 
 ```text
-cd aurras-event-manager
+cd aurras
 ```
 
   3. Deploy the actions using the deploy script. The script supports optional parameters which can be found [here](configuration.md).
@@ -43,17 +48,22 @@ cd aurras-event-manager
 ./deploy.sh
 ```
 
+### Usage
+
+Generate Event Registration ID
+
+```text
+./register_event_source.sh --name polkadot-balance
+```
+
 ### Testing
 
 Run Unit test suites
 
-#### Actions
-
-* Event Receiver
+To test push-notification action it is required to have a push notification token generated from the client and Firebase API Key in TEST\_DEVICE\_TOKEN and FIREBASE\_API\_KEY environment variable respectively
 
 ```text
-cd actions/event-receiver
-yarn test
+cargo test --all-features
 ```
 
 ### License

@@ -22,7 +22,7 @@ cd aurras-deployment-docker-compose/aurras-event-feed-substrate
 
    3. Make [configuration](../configuration.md) changes if need to local.env
 
-   4. Generate the Event ID using `register_event_source.sh` 
+   4. Generate the Event ID using [`register_event_source.sh`](../#usage) 
 
    5. Update the TOPICS env configuration with the generated Event ID
 
