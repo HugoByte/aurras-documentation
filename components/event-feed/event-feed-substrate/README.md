@@ -11,7 +11,7 @@ This Event Feed package facilitates to source events from substrate-based chains
 ### Prerequisites
 
 1. [Substrate Based Chain](https://substrate.dev/docs/en/tutorials/create-your-first-substrate-chain/)
-2. [Openwhisk](../../../dependencies/openwhisk/)
+2. [Aurras Core](../../event-manager/)
 
 ### Installation
 

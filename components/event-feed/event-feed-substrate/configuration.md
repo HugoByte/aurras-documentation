@@ -108,6 +108,10 @@ List of Kafka brokers where the event should be posted. separated by ";"
 
 #### **TOPICS** \[Mandatory\]
 
+{% hint style="info" %}
+Topics are generated using [register\_event\_source.sh](../../event-manager/#usage) 
+{% endhint %}
+
 Topic to which events from certain sections to be posted ";"
 
 Multiple sections with topic can be provided separated by ";"

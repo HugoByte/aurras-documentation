@@ -5,6 +5,7 @@
 1. [Docker](../../../../dependencies/docker/)
 2. [Docker Compose](../../../../dependencies/docker-compose/)
 3. [Openwhisk](../../../../dependencies/openwhisk/) \([docker-compose](../../../../dependencies/openwhisk/deployment/setup-docker-compose.md)\)
+4. [Aurras Core](../../../event-manager/#installation)
 
 ### Deployment Guide
 
@@ -22,7 +23,7 @@ cd aurras-deployment-docker-compose/aurras-event-feed-substrate
 
    3. Make [configuration](../configuration.md) changes if need to local.env
 
-   4. Generate the Event ID using [`register_event_source.sh`](../#usage) 
+   4. Generate the Event ID using [`register_event_source.sh`](../../../event-manager/#usage) 
 
    5. Update the TOPICS env configuration with the generated Event ID
 
