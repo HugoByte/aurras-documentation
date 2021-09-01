@@ -42,7 +42,9 @@ git clone https://github.com/HugoByte/aurras.git
 cd aurras
 ```
 
-  3. Deploy the actions using the deploy script. The script supports optional parameters which can be found [here](configuration.md).
+  3. Generate server token from [https://console.firebase.google.com/project/\[project-name\]/settings/cloudmessaging](https://console.firebase.google.com/project/%5Bproject-name%5D/settings/cloudmessaging) and add as env FIREBASE\_API\_KEY
+
+  4. Deploy the actions using the deploy script. The script supports optional parameters which can be found [here](configuration.md).
 
 ```text
 ./deploy.sh
